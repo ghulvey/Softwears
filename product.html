@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>SoftWears</title>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <script src="main.js"></script>
+    <script src="product.js"></script>
+
+    <script src="https://kit.fontawesome.com/bdc0b33da1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+        <h1>SoftWears</h1>
+        <ul>
+            <li>Shirts</li>
+            <li>Hats</li>
+            <li>Accesories</li>
+            <li><i class="fas fa-shopping-cart"></i></li>
+        </ul>
+    </nav>
+    <div class="banner" name="freeshipping">
+        <p class="left"><i class="fas fa-truck"></i> Free Shipping! With orders over $50.</p>
+        <p class="right" onclick="closeBanner(this.class)"><i class="fas fa-times"></i></p>
+    </div>
+    <article id="app">
+        <section class="product">
+            <div class="gallery">
+                <img class="large-image" :src="images[0]" />
+
+                <div class="image-sidebar">
+                    <img v-for="image in images" :src="image" class="small-image" />
+                </div>
+            </div>
+            <div class="description">
+                <!--<h4 class="preorder">Preorder</h4>
+                    <h4 class="limited">Limited Edition</h4>-->
+                <h4 v-if="flag != null" id="flag" :class="flagCat">{{ flag }}</h4>
+                <h2>{{ name }}</h2>
+                <h5 id="msrp" class="orginal-price">{{ msrp }}</h5>
+                <h3 id="discount" class="price">{{ price }}</h3>
+                <p id="description">{{ description }}</p>
+                <form class="product-selection" onsubmit="addToCart()">
+                    <input type="hidden" name="sku" :value="sku">
+                    <h3>Size</h3>
+                    <div class="sub-select">
+                        <template v-for="size in sizes">
+                            <input type="radio" :id="size" name="size" :value="size" :checked="size == sizeUrl ? true : false">
+                            <label :for="size">{{ size }}</label>
+                        </template>
+                        <!--<input type="radio" id="XS" name="size" value="XS" checked>
+                        <label for="XS">XS</label>
+                        <input type="radio" id="S" name="size" value="S">
+                        <label for="S">S</label>
+                        <input type="radio" id="M" name="size" value="M">
+                        <label for="M">M</label>
+                        <input type="radio" id="L" name="size" value="L">
+                        <label for="L">L</label>
+                        <input type="radio" id="XL" name="size" value="XL">
+                        <label for="XL">XL</label>
+                        <input type="radio" id="2X" name="size" value="2X">
+                        <label for="2X">2X</label>
+                        <input type="radio" id="3X" name="size" value="3X">
+                        <label for="3X">3X</label>-->
+                    </div>
+                    <h3>Color</h3>
+                    <div class="sub-select">
+                        <template v-for="color in colors">
+                            <input type="radio" :id="color" name="color" :value="color" :checked="color == colorUrl ? true : false">
+                            <label :for="color">{{ color }}</label>
+                        </template>
+                        <!--
+                        <input type="radio" id="Red" name="color" value="RE" checked>
+                        <label for="Red">Red</label>
+                        <input type="radio" id="Blue" name="color" value="BU">
+                        <label for="Blue">Blue</label>
+                        <input type="radio" id="Black" name="color" value="BL">
+                        <label for="Black">Black</label>-->
+                    </div>
+                    <input type="submit" class="add-to-cart" value="Add to Cart">
+                </form>
+                <p><strong>Express Shipping:</strong> Monday, May 20th</p>
+                <p><strong>Standard Shipping:</strong> Wednesday, May 22nd</p>
+            </div>
+        </section>
+        <section>
+            <h2>Related Products</h2>
+            <br>
+            <div class="suggestions">
+                <div class="suggestion-box">
+                    <img class="suggestion-image" />
+                    <h4 class="preorder">Preorder</h4>
+                    <h3>Product Name</h3>
+                    <h4>$19.99</h4>
+                </div>
+                <div class="suggestion-box">
+                    <img class="suggestion-image" />
+                    <h3>Product Name</h3>
+                    <h4>$19.99</h4>
+                </div>
+                <div class="suggestion-box">
+                    <img class="suggestion-image" />
+                    <h4 class="limited">Limited Stock</h4>
+                    <h3>Product Name</h3>
+                    <h4>$19.99</h4>
+                </div>
+            </div>
+        </section>
+        <section>
+            <br>
+            <h2>Recently Viewed</h2>
+            <br>
+            <div class="suggestions">
+                <div class="suggestion-box">
+                    <img class="suggestion-image" />
+                    <h4 class="sale">Sale</h4>
+                    <h3>Product Name</h3>
+                    <h4>$19.99</h4>
+                </div>
+                <div class="suggestion-box">
+                    <img class="suggestion-image" />
+                    <h3>Product Name</h3>
+                    <h4>$19.99</h4>
+                </div>
+            </div>
+        </section>
+    </article>
+    <footer>
+        <p>&#169;2020 - SoftWears</p>
+        <!--<img src="images/credit-cards/American-Express-Logo.png">
+        <img src="images/credit-cards/discover_logo.jpg">
+        <img src="images/credit-cards/mc_symbol_opt_73_3x.png">
+        <img src="images/credit-cards/vbm_blu01.png">-->
+        <i class="fab fa-cc-amex"></i>
+        <i class="fab fa-cc-discover"></i>
+        <i class="fab fa-cc-mastercard"></i>
+        <i class="fab fa-cc-visa"></i>
+    </footer>
+</body>
+
+</html>
