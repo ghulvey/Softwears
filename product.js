@@ -7,7 +7,7 @@ const productsJSON = `{
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisis magna etiam tempor orci eu. Semper feugiat nibh sed pulvinar proin gravida hendrerit. Massa tincidunt nunc pulvinar sapien.",
         "msrp": 39.99,
         "discount": 29.99,
-        "flag": "sale",
+        "flag": "Sale",
         "release": "",
         "images": [],
         "sizes": ["XS", "S", "M", "L", "XL", "2X", "3X"],
@@ -35,18 +35,25 @@ Vue.component("rectangular-radio", {
     template: '<input type="radio" id="S" name="size" value="S"> <label for = "S" > S < /label>'
 });
 
+var standardShip = "ERROR";
+var expressShip = "ERROR";
+
+
 window.onload = function productView(event) {
 
+    //Get the values in the URL
     const query = window.location.search;
     const urlParams = new URLSearchParams(query);
 
+    //Parse the url
     const sku = urlParams.get('sku')
     const size = urlParams.get('size')
     const color = urlParams.get('color')
 
+    //Prepare values in products to be processed
     var productParse = JSON.parse(productsJSON);
-    this.console.log(productParse[sku].images)
 
+    //Determine the flag color 
     var flagCat;
     if (productParse[sku].flag != (null || "") && (productParse[sku].flag == "Sale" || productParse[sku].flag == "Preorder")) {
         flagCat = productParse[sku].flag.toLowerCase()
@@ -54,7 +61,7 @@ window.onload = function productView(event) {
         flagCat = "limited"
     }
 
-
+    //Variables to be injected into products.html 
     var app = new Vue({
         el: '#app',
         data: {
@@ -69,7 +76,9 @@ window.onload = function productView(event) {
             description: productParse[sku].description,
             sizes: productParse[sku].sizes,
             colors: productParse[sku].colors,
-            images: productParse[sku].images
+            images: productParse[sku].images,
+            expressShip: expressShip,
+            standardShip: standardShip
         }
     })
 }
