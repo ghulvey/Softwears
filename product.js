@@ -23,7 +23,7 @@ const productsJSON = `{
         "msrp": 319.99,
         "discount": 299.99,
         "flag": "Preorder",
-        "release": "",
+        "release": "2020-5-12",
         "images": ["images/hovertron/85162390-child-on-hover-board-kids-riding-scooter-in-summer-park-balance-board-for-children-electric-self-bal.jpg", "images/hovertron/hoverboard-safety.jpg", "images / hovertron / tmg - article_default_mobile.jpg"],
         "sizes": ["Adult", "Child"],
         "colors": ["Red", "Blue", "Black", "Green", "Pink"],
@@ -35,8 +35,67 @@ Vue.component("rectangular-radio", {
     template: '<input type="radio" id="S" name="size" value="S"> <label for = "S" > S < /label>'
 });
 
-var standardShip = "ERROR";
-var expressShip = "ERROR";
+function dateToString(dateIn) {
+    var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    var day = weekdays[dateIn.getDay()];
+    var date = dateIn.getDate();
+    var month = months[dateIn.getMonth()];
+
+    var lastone = +date.toString().split('').pop();
+    var suffix;
+    if (lastone > 3 || lastone == 0) {
+        suffix = "th";
+    } else if (lastone == 1) {
+        suffix = "st";
+    } else if (lastone == 2) {
+        suffix = "nd";
+    } else if (lastone == 3) {
+        suffix = "rd";
+    }
+
+
+
+    return day + ", " + month + " " + date + suffix
+}
+
+function calcShippingTimes(releaseString) {
+    var departueDate;
+
+    //Convert JSON date to JavaScript
+    var release = new Date(releaseString);
+
+    //Get Todays Date
+    var today = new Date();
+
+    //If a release date is not past use it as the departure date otherwise use today
+    if (release != null || "") {
+        if (release > today) {
+            departueDate = release;
+        } else {
+            departueDate = today;
+        }
+    } else {
+        departueDate = today;
+    }
+
+    //Calculate Arrival Dates
+    var expressArrival = new Date(departueDate)
+    expressArrival.setDate(expressArrival.getDate() + 2);
+
+    var standardArrival = new Date(departueDate)
+    standardArrival.setDate(standardArrival.getDate() + 5);
+
+    var standard = dateToString(standardArrival)
+    var express = dateToString(expressArrival)
+
+    return {
+        standard: standard,
+        express: express
+    }
+
+
+}
 
 
 window.onload = function productView(event) {
@@ -61,6 +120,10 @@ window.onload = function productView(event) {
         flagCat = "limited"
     }
 
+    //Calculate Shipping Times
+    shipingTimes = calcShippingTimes(productParse[sku].release);
+    console.log(shipingTimes.standard)
+
     //Variables to be injected into products.html 
     var app = new Vue({
         el: '#app',
@@ -77,8 +140,8 @@ window.onload = function productView(event) {
             sizes: productParse[sku].sizes,
             colors: productParse[sku].colors,
             images: productParse[sku].images,
-            expressShip: expressShip,
-            standardShip: standardShip
+            expressShip: shipingTimes.express,
+            standardShip: shipingTimes.standard
         }
     })
 }
