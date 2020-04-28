@@ -30,10 +30,6 @@ const productsJSON = `{
         "notes": ""
     }
 }`;
-Vue.component("rectangular-radio", {
-    props: ['value'],
-    template: '<input type="radio" id="S" name="size" value="S"> <label for = "S" > S < /label>'
-});
 
 function dateToString(dateIn) {
     var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
