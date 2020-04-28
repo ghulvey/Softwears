@@ -126,7 +126,7 @@ window.onload = function productView(event) {
 
     //Variables to be injected into products.html 
     var app = new Vue({
-        el: '#app',
+        el: '#product-app',
         data: {
             sku: sku,
             sizeUrl: size,
