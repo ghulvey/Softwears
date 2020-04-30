@@ -30,14 +30,17 @@
         <p class="right" onclick="closeBanner(this.class)"><i class="fas fa-times"></i></p>
     </div>
     <article id="gallery-app">
-        <!-------------------------------------------
-        
-        
-            CODE GOES HERE
-        
-        
-        -------------------------------------------->
-
+        <template v-for="sku in skus">
+            <a :href="'product.html?sku=' + sku">
+            <div class="gallery-item">
+                <img :src="products[sku]['images'][0]">
+                <h4 id="flag" :class="products[sku]['flag'] == 'Sale' ? 'sale' : products[sku]['flag'] == 'Preorder' ? 'preorder' : 'limited'">{{ products[sku]["flag"] }}</h4>
+                <h2>{{ products[sku]["name"] }}</h2>
+                <h4 class="orginal-price">${{ products[sku]["msrp"] }}</h4>
+                <h3 class="price">${{ products[sku]["discount"] }}</h3>
+            </div>
+        </a>
+        </template>
     </article>
     <footer>
         <p>&#169;2020 - SoftWears</p>

@@ -31,6 +31,7 @@ const productsJSON = `{
     }
 }`;
 
+
 function dateToString(dateIn) {
     var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
@@ -93,6 +94,28 @@ function calcShippingTimes(releaseString) {
 
 }
 
+//Determine the flag color 
+function flagCat(item) {
+    var flagCat;
+    if (item.flag != (null || "") && (item.flag == "Sale" || item.flag == "Preorder")) {
+        flagCat = item.flag.toLowerCase()
+    } else if (item.flag != (null || "")) {
+        flagCat = "limited"
+    }
+    return flagCat
+}
+
+function toArray(key) {
+    var productParse = JSON.parse(productsJSON);
+    skus = Object.getOwnPropertyNames(productParse)
+    values = new Array()
+    for (i = 0; i < skus.length; i++) {
+        console.log(productParse[skus[i]][key])
+        values.push(productParse[skus[i]][key])
+    }
+
+    return values
+}
 
 window.onload = function productView(event) {
 
@@ -108,36 +131,42 @@ window.onload = function productView(event) {
     //Prepare values in products to be processed
     var productParse = JSON.parse(productsJSON);
 
-    //Determine the flag color 
-    var flagCat;
-    if (productParse[sku].flag != (null || "") && (productParse[sku].flag == "Sale" || productParse[sku].flag == "Preorder")) {
-        flagCat = productParse[sku].flag.toLowerCase()
-    } else if (productParse[sku].flag != (null || "")) {
-        flagCat = "limited"
+
+    if (sku != null) {
+
+        //Calculate Shipping Times
+        shipingTimes = calcShippingTimes(productParse[sku].release);
+        console.log(shipingTimes.standard)
+
+        //Variables to be injected into products.html 
+        var app = new Vue({
+            el: '#product-app',
+            data: {
+                sku: sku,
+                sizeUrl: size,
+                colorUrl: color,
+                name: productParse[sku].name,
+                flag: productParse[sku].flag,
+                flagCat: flagCat(productParse[sku]),
+                msrp: "$" + productParse[sku].msrp,
+                price: "$" + productParse[sku].discount,
+                description: productParse[sku].description,
+                sizes: productParse[sku].sizes,
+                colors: productParse[sku].colors,
+                images: productParse[sku].images,
+                expressShip: shipingTimes.express,
+                standardShip: shipingTimes.standard,
+                test: "EXAMPLE"
+            }
+        })
     }
 
-    //Calculate Shipping Times
-    shipingTimes = calcShippingTimes(productParse[sku].release);
-    console.log(shipingTimes.standard)
-
-    //Variables to be injected into products.html 
-    var app = new Vue({
-        el: '#product-app',
+    var app2 = new Vue({
+        el: '#gallery-app',
         data: {
-            sku: sku,
-            sizeUrl: size,
-            colorUrl: color,
-            name: productParse[sku].name,
-            flag: productParse[sku].flag,
-            flagCat: flagCat,
-            msrp: "$" + productParse[sku].msrp,
-            price: "$" + productParse[sku].discount,
-            description: productParse[sku].description,
-            sizes: productParse[sku].sizes,
-            colors: productParse[sku].colors,
-            images: productParse[sku].images,
-            expressShip: shipingTimes.express,
-            standardShip: shipingTimes.standard
+            skus: toArray("sku"),
+            products: productParse
         }
     })
+
 }
