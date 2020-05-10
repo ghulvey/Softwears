@@ -32,6 +32,46 @@ const productsJSON = `{
 }`;
 
 
+function addToCart() {
+    var sku = document.getElementsByName("sku")[0].value;
+
+    var sizes = document.getElementsByName("size");
+    var size;
+
+    for (i = 0; i < sizes.length; i++) {
+        if (sizes[i].checked) {
+            size = sizes[i].value;
+            break;
+        }
+    }
+
+    var colors = document.getElementsByName("color");
+    var color;
+
+    for (i = 0; i < colors.length; i++) {
+        if (colors[i].checked) {
+            color = colors[i].value;
+            break;
+        }
+    }
+
+    itemId = sku + "-00-" + color + "-" + size
+
+    alert(itemId)
+
+    if (sessionStorage.cart) {
+        cart = JSON.parse(sessionStorage.getItem('cart'));
+    } else {
+        cart = [];
+    }
+    cart.push(itemId)
+    sessionStorage.setItem('cart', JSON.stringify(cart));
+
+    return false;
+
+}
+
+
 function dateToString(dateIn) {
     var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
