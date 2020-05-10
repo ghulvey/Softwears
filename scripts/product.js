@@ -57,7 +57,6 @@ function addToCart() {
 
     itemId = sku + "-00-" + color + "-" + size
 
-    alert(itemId)
 
     if (sessionStorage.cart) {
         cart = JSON.parse(sessionStorage.getItem('cart'));
@@ -72,7 +71,6 @@ function addToCart() {
 }
 
 function removeFromCart(index) {
-    alert("removed pressed")
     cart = JSON.parse(sessionStorage.getItem('cart'))
     cart.splice(index, 1)
     sessionStorage.setItem('cart', JSON.stringify(cart));
