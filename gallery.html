@@ -19,10 +19,8 @@
     <nav>
         <h1>SoftWears</h1>
         <ul>
-            <li>Shirts</li>
-            <li>Hats</li>
-            <li>Accesories</li>
-            <li><i class="fas fa-shopping-cart"></i></li>
+            <li><a href="gallery.html">Products</a></li>
+            <li><a href="cart.html"><i class=" fas fa-shopping-cart "></i></a></li>
         </ul>
     </nav>
     <div class="banner" name="freeshipping">
@@ -38,6 +36,7 @@
                 <h2>{{ products[sku]["name"] }}</h2>
                 <h4 class="orginal-price">${{ products[sku]["msrp"] }}</h4>
                 <h3 class="price">${{ products[sku]["discount"] }}</h3>
+
             </div>
         </a>
         </template>

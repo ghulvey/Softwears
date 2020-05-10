@@ -48,6 +48,11 @@
         padding: 14px 30px;
         margin-top: -8px;
     }
+    
+    nav ul li a {
+        color: #ffffff;
+        text-decoration: none;
+    }
     /* Footer */
     
     footer {
@@ -266,6 +271,23 @@
         height: 180px;
         background-color: rgb(170, 170, 170);
         object-fit: cover;
+    }
+    
+    .left {
+        text-align: left;
+    }
+    
+    .cart-item {
+        width: 70%;
+        margin: 10px;
+        float: left;
+    }
+    
+    .cart-item img {
+        width: 20%;
+        height: 100px;
+        float: left;
+        margin-right: 20px;
     }
     
     footer {

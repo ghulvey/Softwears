@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>SoftWears</title>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <script src="main.js"></script>
+    <script src="scripts/product.js"></script>
+
+
+    <script src="https://kit.fontawesome.com/bdc0b33da1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+        <h1>SoftWears</h1>
+        <ul>
+            <li><a href="gallery.html">Products</a></li>
+            <li><a href="cart.html"><i class=" fas fa-shopping-cart "></i></a></li>
+        </ul>
+    </nav>
+    <div class="banner " name="freeshipping ">
+        <p class="left "><i class="fas fa-truck "></i> Free Shipping! With orders over $50.</p>
+        <p class="right " onclick="closeBanner(this.class) "><i class="fas fa-times "></i></p>
+    </div>
+    <article id="cart-app">
+        <template v-for="(sku, index) in skus ">
+            <div class="cart-item ">
+                <img :src="products[sku][ 'images'][0] " />
+                <h2 class="left ">{{  products[sku]['name'] }}</h2>
+                <h4>Color: {{ colors[index] }} • Size: {{ sizes[index] }}</h4>
+                <h3>{{ products[sku]['discount']}}</h3>
+                <button :onclick=" 'removeFromCart(' + index + ')' ">Remove</button>
+            </div>
+        </template>
+    </article>
+    <footer>
+        <p>&#169;2020 - SoftWears</p>
+        <i class="fab fa-cc-amex "></i>
+        <i class="fab fa-cc-discover "></i>
+        <i class="fab fa-cc-mastercard "></i>
+        <i class="fab fa-cc-visa "></i>
+    </footer>
+</body>
+
+</html>
