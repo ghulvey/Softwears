@@ -48,6 +48,11 @@
         padding: 14px 30px;
         margin-top: -8px;
     }
+    
+    nav ul li a {
+        color: #ffffff;
+        text-decoration: none;
+    }
     /* Footer */
     
     footer {

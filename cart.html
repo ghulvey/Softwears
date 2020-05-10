@@ -28,7 +28,7 @@
         <p class="left "><i class="fas fa-truck "></i> Free Shipping! With orders over $50.</p>
         <p class="right " onclick="closeBanner(this.class) "><i class="fas fa-times "></i></p>
     </div>
-    <article id="cart-app ">
+    <article id="cart-app">
         <template v-for="(sku, index) in skus ">
             <div class="cart-item ">
                 <img :src="products[sku][ 'images'][0] " />
