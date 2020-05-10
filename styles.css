@@ -268,6 +268,23 @@
         object-fit: cover;
     }
     
+    .left {
+        text-align: left;
+    }
+    
+    .cart-item {
+        width: 70%;
+        margin: 10px;
+        float: left;
+    }
+    
+    .cart-item img {
+        width: 20%;
+        height: 100px;
+        float: left;
+        margin-right: 20px;
+    }
+    
     footer {
         clear: both;
     }
