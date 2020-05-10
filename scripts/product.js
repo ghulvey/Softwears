@@ -71,6 +71,18 @@ function addToCart() {
 
 }
 
+function sessionCartItems(value) {
+    cart = JSON.parse(sessionStorage.getItem('cart'))
+    var result = new Array();
+
+    for (i = 0; i < cart.length; i++) {
+        result.push(cart[i].split("-")[value])
+    }
+
+
+    return result
+}
+
 
 function dateToString(dateIn) {
     var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -207,6 +219,16 @@ window.onload = function productView(event) {
             skus: toArray("sku"),
             products: productParse
         }
-    })
+    });
+
+    var app3 = new Vue({
+        el: '#cart-app',
+        data: {
+            skus: sessionCartItems(0),
+            colors: sessionCartItems(2),
+            sizes: sessionCartItems(3),
+            products: productParse
+        }
+    });
 
 }
