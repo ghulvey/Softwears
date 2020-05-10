@@ -37,7 +37,7 @@
                 <h2 class="left">{{  products[sku]['name'] }}</h2>
                 <h4>{{ colors[index] }} * {{ sizes[index] }}</h4>
                 <h3>{{ products[sku]['discount']}}</h3>
-                <a href="" onclick="removeFromCart(index)">Remove</a>
+                <button :onclick="'removeFromCart(' + index + ')'">Remove</button>
             </div>
         </template>
     </article>

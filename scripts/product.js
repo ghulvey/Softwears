@@ -71,6 +71,14 @@ function addToCart() {
 
 }
 
+function removeFromCart(index) {
+    alert("removed pressed")
+    cart = JSON.parse(sessionStorage.getItem('cart'))
+    cart.splice(index, 1)
+    sessionStorage.setItem('cart', JSON.stringify(cart));
+    location.reload()
+}
+
 function sessionCartItems(value) {
     cart = JSON.parse(sessionStorage.getItem('cart'))
     var result = new Array();
