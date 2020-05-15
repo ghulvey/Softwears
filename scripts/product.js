@@ -20,13 +20,13 @@ const productsJSON = `{
         "category": "Mug",
         "tags": [],
         "description": "A device that holds the liquids that programmers use to code into the night.",
-        "msrp": 319.99,
-        "discount": 299.99,
+        "msrp": 39.99,
+        "discount": 29.99,
         "flag": "Preorder",
         "release": "2020-5-12",
         "images": ["images/JavaCup.png"],
-        "sizes": ["Adult", "Child"],
-        "colors": ["Red", "Blue", "Black", "Green", "Pink"],
+        "sizes": ["8oz", "12oz"],
+        "colors": ["White", "Black"],
         "notes": ""
     }
 }`;
