@@ -28,5 +28,20 @@
         "sizes": ["Adult", "Child"],
         "colors": ["Red", "Blue", "Black", "Green", "Pink"],
         "notes": ""
-    }
+    },
+	 "3": {
+        "sku": 3,
+        "name": "Test",
+        "category": "Misc",
+        "tags": [],
+        "description": "A product that's pretty cool",
+        "msrp": 9.99,
+        "discount": 4.99,
+        "flag": "sale",
+        "release": "",
+        "images": [],
+        "sizes": ["12 oz"],
+        "colors": ["White"],
+        "notes": ""
+		}
 }
