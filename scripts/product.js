@@ -37,7 +37,7 @@ const productsJSON = `{
         "description": "A product that's pretty cool",
         "msrp": 9.99,
         "discount": 4.99,
-        "flag": "sale",
+        "flag": "Sale",
         "release": "",
         "images": [],
         "sizes": ["12 oz"],
@@ -55,7 +55,7 @@ const productsJSON = `{
         "flag": "Sale",
         "release": "",
         "images": [],
-        "sizes": ["XS, S, M, L, XL, 2X, 3X"],
+        "sizes": ["XS", "S", "M", "L", "XL", "2X", "3X"],
         "colors": ["White", "Black"],
         "notes": ""
 		},
@@ -81,13 +81,13 @@ const productsJSON = `{
         "name": "Python Necklace",
         "category": "Misc",
         "tags": [],
-        "description": "It's a charm based on python... A PyCharm. ",
+        "description": "It's a charm based on Python... A PyCharm of sorts.",
         "msrp": 16.99,
         "discount": 9.99,
         "flag": "Sale",
         "release": "",
         "images": [],
-        "sizes": [""],
+        "sizes": ["Regular"],
         "colors": ["Blue and Yellow"],
         "notes": ""
 		}
