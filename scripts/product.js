@@ -95,8 +95,6 @@ const productsJSON = `{
 }`;
 
 
-}`;
-
 
 function addToCart() {
     var sku = document.getElementsByName("sku")[0].value;
