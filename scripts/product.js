@@ -28,22 +28,7 @@ const productsJSON = `{
         "sizes": ["Adult", "Child"],
         "colors": ["Red", "Blue", "Black", "Green", "Pink"],
         "notes": ""
-    },
-	"3":{
-"sku": 3,
-"name": Java Coffee Cup",
-"category": "Miscellaneous",
-"tags": [],
-"description": "A fresh brew of java to start your day.",
-"msrp": 9.99, 
-"discount": 4.99, 
-"flag": "Sale",
-"release": "", 
-"images" [], 
-"sizes": ["12 oz."],
-"colors": ["White"], 
-"notes": ""
-	}
+    }
 }`;
 
 
