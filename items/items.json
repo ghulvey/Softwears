@@ -94,3 +94,99 @@
 
 }`;
 
+const productsJSON = `{
+    "198472": {
+        "sku": 198472,
+        "name": "Product Name",
+        "category": "Example",
+        "tags": [],
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisis magna etiam tempor orci eu. Semper feugiat nibh sed pulvinar proin gravida hendrerit. Massa tincidunt nunc pulvinar sapien.",
+        "msrp": 39.99,
+        "discount": 29.99,
+        "flag": "Sale",
+        "release": "",
+        "images": [],
+        "sizes": ["XS", "S", "M", "L", "XL", "2X", "3X"],
+        "colors": ["Red", "Blue", "Black"],
+        "notes": ""
+    },
+    "192456": {
+        "sku": 192456,
+        "name": "Java Coffee Cup",
+        "category": "Mug",
+        "tags": [],
+        "description": "A device that holds the liquids that programmers use to code into the night.",
+        "msrp": 39.99,
+        "discount": 29.99,
+        "flag": "Preorder",
+        "release": "2020-5-12",
+        "images": ["images/JavaCup.png"],
+        "sizes": ["8oz", "12oz"],
+        "colors": ["White", "Black"],
+        "notes": ""
+    },
+	 "3": {
+        "sku": 3,
+        "name": "Test",
+        "category": "Misc",
+        "tags": [],
+        "description": "A product that's pretty cool",
+        "msrp": 9.99,
+        "discount": 4.99,
+        "flag": "Sale",
+        "release": "",
+        "images": [],
+        "sizes": ["12 oz"],
+        "colors": ["White"],
+        "notes": ""
+		},
+			 "4": {
+        "sku": 4,
+        "name": "Front-end-Back-End",
+        "category": "Shirts",
+        "tags": [],
+        "description": "",
+        "msrp": 19.99,
+        "discount": 13.99,
+        "flag": "Sale",
+        "release": "",
+        "images": [],
+        "sizes": ["XS", "S", "M", "L", "XL", "2X", "3X"],
+        "colors": ["White", "Black"],
+        "notes": ""
+		},
+
+ "5": {
+        "sku": 5,
+        "name": "Class cancelled",
+        "category": "Shirts",
+        "tags": [],
+        "description": ":(",
+        "msrp": 19.99,
+        "discount": 13.99,
+        "flag": "Sale",
+        "release": "",
+        "images": [],
+        "sizes": ["XS, S, M, L, XL, 2X, 3X"],
+        "colors": ["White", Black"],
+        "notes": ""
+		},
+
+ "6": {
+        "sku": 6,
+        "name": "Python Necklace",
+        "category": "Misc",
+        "tags": [],
+        "description": "It's a charm based on Python... A PyCharm of sorts.",
+        "msrp": 16.99,
+        "discount": 9.99,
+        "flag": "Sale",
+        "release": "",
+        "images": [],
+        "sizes": ["Regular"],
+        "colors": ["Blue and Yellow"],
+        "notes": ""
+		}
+
+}`;
+
