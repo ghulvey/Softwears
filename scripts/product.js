@@ -43,7 +43,58 @@ const productsJSON = `{
         "sizes": ["12 oz"],
         "colors": ["White"],
         "notes": ""
+		},
+			 "4": {
+        "sku": 4,
+        "name": "Front-end-Back-End",
+        "category": "Shirts",
+        "tags": [],
+        "description": "",
+        "msrp": 19.99,
+        "discount": 13.99,
+        "flag": "Sale",
+        "release": "",
+        "images": [],
+        "sizes": ["XS, S, M, L, XL, 2X, 3X"],
+        "colors": ["White, Black"],
+        "notes": ""
+		},
+
+ "5": {
+        "sku": 5,
+        "name": "Class cancelled",
+        "category": "Shirts",
+        "tags": [],
+        "description": ":(",
+        "msrp": 19.99,
+        "discount": 13.99,
+        "flag": "Sale",
+        "release": "",
+        "images": [],
+        "sizes": ["XS, S, M, L, XL, 2X, 3X"],
+        "colors": ["White, Black"],
+        "notes": ""
+		},
+
+ "6": {
+        "sku": 6,
+        "name": "Python Necklace",
+        "category": "Misc",
+        "tags": [],
+        "description": "It's a charm based on python... A PyCharm. ",
+        "msrp": 16.99
+        "discount": 9.99,
+        "flag": "Sale",
+        "release": "",
+        "images": [],
+        "sizes": [""]
+        "colors": ["Blue and Yellow "],
+        "notes": ""
 		}
+
+}`;
+
+
 }`;
 
 
