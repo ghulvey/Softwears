@@ -56,7 +56,7 @@ const productsJSON = `{
         "release": "",
         "images": [],
         "sizes": ["XS, S, M, L, XL, 2X, 3X"],
-        "colors": ["White, Black"],
+        "colors": ["White", "Black"],
         "notes": ""
 		},
 
@@ -72,7 +72,7 @@ const productsJSON = `{
         "release": "",
         "images": [],
         "sizes": ["XS, S, M, L, XL, 2X, 3X"],
-        "colors": ["White, Black"],
+        "colors": ["White", Black"],
         "notes": ""
 		},
 
@@ -82,13 +82,13 @@ const productsJSON = `{
         "category": "Misc",
         "tags": [],
         "description": "It's a charm based on python... A PyCharm. ",
-        "msrp": 16.99
+        "msrp": 16.99,
         "discount": 9.99,
         "flag": "Sale",
         "release": "",
         "images": [],
-        "sizes": [""]
-        "colors": ["Blue and Yellow "],
+        "sizes": [""],
+        "colors": ["Blue and Yellow"],
         "notes": ""
 		}
 
