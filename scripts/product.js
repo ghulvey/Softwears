@@ -122,6 +122,20 @@ function sessionCartItems(value) {
     return result
 }
 
+function cartSum() {
+    cart = JSON.parse(sessionStorage.getItem('cart'));
+    var productParse = JSON.parse(productsJSON);
+    var result = 0.00;
+
+    for (i = 0; i < cart.length; i++) {
+        var sku = cart[i].split("-")[0];
+        result += productParse[sku]["discount"]
+    }
+
+
+    return result
+}
+
 
 function dateToString(dateIn) {
     var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -196,6 +210,8 @@ function flagCat(item) {
     return flagCat
 }
 
+
+
 function toArray(key) {
     var productParse = JSON.parse(productsJSON);
     skus = Object.getOwnPropertyNames(productParse)
@@ -266,7 +282,11 @@ window.onload = function productView(event) {
             skus: sessionCartItems(0),
             colors: sessionCartItems(2),
             sizes: sessionCartItems(3),
-            products: productParse
+            products: productParse,
+            total: cartSum().toFixed(2),
+            shipping: '0.00',
+            tax: (cartSum() * .0675).toFixed(2),
+            grandTotal: (cartSum() * 1.0675).toFixed(2)
         }
     });
 

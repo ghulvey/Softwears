@@ -303,3 +303,7 @@
     footer {
         clear: both;
     }
+    
+    .cart-summary h2 {
+        text-align: left;
+    }
