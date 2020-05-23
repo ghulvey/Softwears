@@ -69,7 +69,7 @@ const productsJSON = `{
 		"discount": 13.99, 
 		"flag": "Sale", 
 		"release": "",
-		"images": [],
+		"images": ["images/pythonNecklace.png"],
 	"sizes": ["Regular"],
 		"colors": ["Blue and Yellow"],
 		"notes": "" 
