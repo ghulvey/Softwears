@@ -41,7 +41,6 @@
         font-size: 28px;
         padding: 4px;
         margin-top: -8px;
-		
     }
     
     nav ul {
@@ -156,6 +155,7 @@
         height: 550px;
         background-color: rgb(170, 170, 170);
         float: left;
+        object-fit: cover;
     }
     
     .image-sidebar {
@@ -299,18 +299,17 @@
         height: 100px;
         float: left;
         margin-right: 20px;
+        object-fit: cover;
     }
     
     footer {
         clear: both;
     }
-	
-	
-#logo
-{
-width: 64px;
-}
-
-a{text-decoration: none;}
-	
-	
+    
+    #logo {
+        width: 64px;
+    }
+    
+    a {
+        text-decoration: none;
+    }
