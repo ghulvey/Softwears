@@ -14,21 +14,6 @@ const productsJSON = `{
         "colors": ["White", "Black"],
         "notes": ""
     },
-	 "3": {
-        "sku": 3,
-        "name": "Test",
-        "category": "Misc",
-        "tags": [],
-        "description": "A product that's pretty cool",
-        "msrp": 9.99,
-        "discount": 4.99,
-        "flag": "Sale",
-        "release": "",
-        "images": [],
-        "sizes": ["12 oz"],
-        "colors": ["White"],
-        "notes": ""
-		},
 	 "4": {
         "sku": 4,
         "name": "Front-end-Back-End",
