@@ -3,8 +3,7 @@ body
     background-color: #4349
 }
 
-
-h1
+#h2
 {
 margin-left: 100px;
 text-align: center;
@@ -16,9 +15,10 @@ p
     color: #e9f7d3;
 }
 
-article
+article h2
 {
-	
+	font-size: 48px;
+	padding-bottom: 12px;
 }
 
 div 
@@ -27,3 +27,14 @@ div
 		padding: 10px;
 		border: 5px double #b7b70a;
 	}
+	
+	a{
+		text-decoration: none;
+	}
+
+
+#logo
+{
+ width: 64px;   
+}
+
