@@ -71,7 +71,7 @@ const productsJSON = `{
         "flag": "Sale",
         "release": "",
         "images": ["images/ClassCancelled.png"],
-        "sizes": ["XS", "S", "M", "L", "XL", "2X", "3"X"],
+        "sizes": ["XS", "S", "M", "L", "XL", "2X", "3X"],
         "colors": ["White", "Black"],
         "notes": ""
 		}
