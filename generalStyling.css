@@ -21,3 +21,9 @@ article
 	
 }
 
+div 
+	{
+		background-color: cfc;
+		padding: 10px;
+		border: 5px double #b7b70a;
+	}
