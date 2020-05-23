@@ -15,6 +15,12 @@
         font-family: "Roboto Mono";
     }
     
+    body {
+        position: relative;
+        min-height: 100vh;
+        /* Should be equal to the height of your footer */
+    }
+    
     p {
         font-family: Roboto;
     }
@@ -60,6 +66,9 @@
         color: #ffffff;
         padding: 20px;
         text-align: center;
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
     }
     
     footer i {
