@@ -1,19 +1,4 @@
 const productsJSON = `{
-    "198472": {
-        "sku": 198472,
-        "name": "Product Name",
-        "category": "Example",
-        "tags": [],
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisis magna etiam tempor orci eu. Semper feugiat nibh sed pulvinar proin gravida hendrerit. Massa tincidunt nunc pulvinar sapien.",
-        "msrp": 39.99,
-        "discount": 29.99,
-        "flag": "Sale",
-        "release": "",
-        "images": [],
-        "sizes": ["XS", "S", "M", "L", "XL", "2X", "3X"],
-        "colors": ["Red", "Blue", "Black"],
-        "notes": ""
-    },
     "192456": {
         "sku": 192456,
         "name": "Java Coffee Cup",
@@ -85,8 +70,8 @@ const productsJSON = `{
         "discount": 14.99,
         "flag": "Sale",
         "release": "",
-        "images": [],
-        "sizes": ["XS, S, M, L, XL, 2X, 3X"],
+        "images": ["images/ClassCancelled.png"],
+        "sizes": ["XS", "S", "M", "L", "XL", "2X", "3"X"],
         "colors": ["White", "Black"],
         "notes": ""
 		}
