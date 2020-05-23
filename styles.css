@@ -41,6 +41,7 @@
         font-size: 28px;
         padding: 4px;
         margin-top: -8px;
+		
     }
     
     nav ul {
@@ -303,7 +304,13 @@
     footer {
         clear: both;
     }
-    
-    .cart-summary h2 {
-        text-align: left;
-    }
+	
+	
+#logo
+{
+width: 64px;
+}
+
+a{text-decoration: none;}
+	
+	
