@@ -66,9 +66,9 @@
         color: #ffffff;
         padding: 20px;
         text-align: center;
-        width: 100%;
         position: absolute;
         bottom: 0px;
+        width: 100%;
     }
     
     footer i {
@@ -151,7 +151,7 @@
     }
     
     .large-image {
-        width: 80%;
+        width: 95%;
         height: 550px;
         background-color: rgb(170, 170, 170);
         float: left;
@@ -262,6 +262,7 @@
         float: left;
         /*box-shadow: 10px 10px 8px #888888;*/
         margin: 20px;
+        color: black;
     }
     
     .gallery-item .sale,
