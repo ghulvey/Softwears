@@ -40,6 +40,13 @@
                 <button :onclick=" 'removeFromCart(' + index + ')' ">Remove</button>
             </div>
         </template>
+        <div class="cart-summary">
+            <h5>Subtotal: ${{total}}</h5>
+            <h5>Shipping: ${{shipping}}</h5>
+            <h5>Tax: ${{tax}}</h5>
+            <h2>${{grandTotal}}</h2>
+            <input type="submit" class="add-to-cart" value="Check Out Now">
+        </div>
     </article>
     <footer>
         <p>&#169;2020 - SoftWears</p>
