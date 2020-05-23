@@ -15,6 +15,12 @@
         font-family: "Roboto Mono";
     }
     
+    body {
+        position: relative;
+        min-height: 100vh;
+        /* Should be equal to the height of your footer */
+    }
+    
     p {
         font-family: Roboto;
     }
@@ -60,6 +66,9 @@
         color: #ffffff;
         padding: 20px;
         text-align: center;
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
     }
     
     footer i {
@@ -142,7 +151,7 @@
     }
     
     .large-image {
-        width: 80%;
+        width: 95%;
         height: 550px;
         background-color: rgb(170, 170, 170);
         float: left;
@@ -253,6 +262,7 @@
         float: left;
         /*box-shadow: 10px 10px 8px #888888;*/
         margin: 20px;
+        color: black;
     }
     
     .gallery-item .sale,
