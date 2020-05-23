@@ -313,3 +313,8 @@
     a {
         text-decoration: none;
     }
+    
+    nav li a {
+        display: inline-block;
+        padding: 15px
+    }
