@@ -19,14 +19,14 @@ const productsJSON = `{
         "name": "Front-end-Back-End",
         "category": "Shirts",
         "tags": [],
-        "description": "",
+        "description": "Yes. The gimmick is what you think it is.",
         "msrp": 19.99,
         "discount": 13.99,
         "flag": "Sale",
         "release": "",
-        "images": [],
+        "images": ["images/frontEndBackEnd.png"],
         "sizes": ["XS", "S", "M", "L", "XL", "2X", "3X"],
-        "colors": ["White", "Black"],
+        "colors": ["White"],
         "notes": ""
 		},
 	"5": {
